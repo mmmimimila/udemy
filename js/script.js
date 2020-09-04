@@ -1,14 +1,18 @@
 "use strict";
-
-a= 15;
-let number=5;
-const leftBorderWidth=1;
-
-const obj={
-    a:50
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?','5');
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false,
 };
-obj.a=10;
-console.log(obj);
-//прямых консатнт в js не бывает
+const lastWatchedFilm = prompt('Один из последних просмотренных фильмов?','Interstellar'),
+      filmScore = prompt('На сколько оцените его?','10'),
+      lastWatchedFilm2 = prompt('Один из последних просмотренных фильмов?','Logan'),
+      filmScore2 = prompt('На сколько оцените его?','10');
 
-let re='Ivan';
+personalMovieDB.movies[lastWatchedFilm] = filmScore;
+personalMovieDB.movies[lastWatchedFilm2] = filmScore2;
+
+console.log(personalMovieDB);
